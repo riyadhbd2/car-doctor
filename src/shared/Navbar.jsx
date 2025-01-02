@@ -23,7 +23,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,7 +58,8 @@ const Navbar = () => {
       {navitems}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end gap-2">
+        <button className="bg-orange-500 text-white px-2 py-1 rounded-2xl"><Link to="/login">Login</Link></button>
       <button className="btn btn-outline btn-error">Appointment</button>
       </div>
     </div>

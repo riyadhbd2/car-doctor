@@ -13,7 +13,7 @@ const Hero = () => {
       <div id="slide1" className="carousel-item relative w-full">
         <img src={photo_one} className="w-full h-full rounded-lg" />
         {/* text */}
-        <div className="w-1/2 h-full rounded-lg absolute top-1/2 justify-center items-center flex -translate-y-1/2 transform p-10  bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
+        <div className="w-1/2 h-full absolute top-1/2 justify-center items-center flex -translate-y-1/2 transform p-10  bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)] rounded-lg">
           <div>
             <h2 className="text-6xl text-white">
               Affordable Price For Car Servicing
@@ -94,7 +94,7 @@ const Hero = () => {
       <div id="slide6" className="carousel-item relative w-full">
         <img src={photo_six} className="w-full h-full" />
         <div className="absolute left-5 right-5 bottom-0 flex -translate-y-1/2 transform justify-end gap-3">
-          <a href="#slide5" className="btn btn-circle">
+          <a href="#slide" className="btn btn-circle">
             ❮
           </a>
           <a href="#slide1" className="btn btn-circle">
