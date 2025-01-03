@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Booking = () => {
   const bookingData = useLoaderData();
 
   const {user} = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -32,6 +34,12 @@ const Booking = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data);
+        if(data.insertedId){
+            alert("Booking added successfully");
+            form.reset();
+            navigate('/');
+
+        }
     })
   }
 

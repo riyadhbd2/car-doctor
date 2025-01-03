@@ -28,7 +28,7 @@ const Navbar = () => {
         <Link>Services</Link>
       </li>
       <li>
-        <Link>Blog</Link>
+        <Link to='/userbookings'>Bookings</Link>
       </li>
       <li>
         <Link>Contact</Link>
