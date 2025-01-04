@@ -1,11 +1,14 @@
 import React, { useContext } from 'react'
 import login from '../assets/images/login/login.svg'
-import { Link, useNavigate } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
 import { AuthContext } from '../providers/AuthProvider'
 
 const Login = () => {
 
     const {loginUser} = useContext(AuthContext);
+
+    const location = useLocation();
+    console.log(location);
 
     const navigate = useNavigate();
 
@@ -19,7 +22,7 @@ const Login = () => {
         .then(res => {
             const user = res.user;
             console.log(user);
-            navigate('/');
+            navigate(location.state? location.state : '/');
             
            
         })
